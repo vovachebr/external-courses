@@ -1,8 +1,10 @@
 function f(arr){
     const correctArr = Array.from(arr);
-    for(let i = 1; i<correctArr.length;i++)
-        if(correctArr[i-1] != correctArr[i])
+    for(let i = 1; i<correctArr.length;i++){
+        if(correctArr[i-1] !== correctArr[i]){
             return false;            
+        }
+    }
     return true;
 }
 

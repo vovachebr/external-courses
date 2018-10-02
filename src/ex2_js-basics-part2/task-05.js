@@ -1,9 +1,11 @@
 function f(arr){
     const correctArr = Array.from(arr);
     let max = correctArr[0];
-    for(let i = 1; i<correctArr.length;i++)
-        if(correctArr[i] > max)
+    for(let i = 1; i<correctArr.length;i++){
+        if(correctArr[i] > max){
             max = correctArr[i];
+        }
+    }
 
     return max;
 }

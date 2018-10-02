@@ -1,8 +1,9 @@
 'use strict'
 
 function f(value){
-    if(typeof(value) === "string" || typeof(value) === "number")
+    if(typeof(value) === "string" || typeof(value) === "number"){
         return typeof(value);
+    }
 }
 
 console.log(f(1));

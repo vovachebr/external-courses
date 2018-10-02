@@ -6,11 +6,9 @@ function f(value){
     }
 
     for (var i=2;i<value;i++){
-        if(value <=1 || value%i==0){
-            return false;
+        if(value <= 1 || value%i === 0){
+            console.log(`Число ${value} - составное число`);
         }
     }
-    return true;
+    console.log(`Число ${value} - простое число`);
 }
-console.log("Число 13 - " + (f(13) ? "простое" : "составное") + "число");
-console.log("Число 14 - " + (f(14) ? "простое" : "составное") + "число");
