@@ -1,5 +1,6 @@
 function f(obj){
-    for (var key in obj) {
+    var key;
+    for (key in obj) {
         console.log("Property: "+key+" with value: "+obj[key]);
     }
 }

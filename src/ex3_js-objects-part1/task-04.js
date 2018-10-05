@@ -1,8 +1,9 @@
 function f(property, object){
-    if(!(property in object)){
-        object[property]="new";
+    var newObject = object;
+    if(!(property in newObject)){
+        newObject[property]="new";
     }
-    return object;
+    return newObject;
 }
 
 console.log(f("prop",{}));

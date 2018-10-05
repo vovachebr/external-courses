@@ -1,6 +1,7 @@
 function f(obj){
     let copyObj = {};
-    for (var key in obj) {
+    var key;
+    for (key in obj) {
         copyObj[key] = obj[key];
     }
     return copyObj;
