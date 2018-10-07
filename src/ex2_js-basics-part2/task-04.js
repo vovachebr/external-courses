@@ -11,3 +11,5 @@ function f(arr){
 console.log(f([1,2,3,0]));
 console.log(f([1,1,1]));
 console.log(f([1,1,2]));
+
+module.exports = f;

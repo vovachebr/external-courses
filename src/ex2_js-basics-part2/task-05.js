@@ -14,3 +14,5 @@ console.log(f([1,2,3,0]));
 console.log(f([1,1,1]));
 console.log(f([1,1,2]));
 console.log(f([9,3,45]));
+
+module.exports = f;
