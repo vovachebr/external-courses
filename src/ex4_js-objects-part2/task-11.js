@@ -10,6 +10,9 @@ function countSymbols(str){
     return result;
 }
 
-console.log(countSymbols('abbac'));
+let restult = countSymbols('abbac');
+console.log(result.a);
+console.log(result.b);
+console.log(result.c);
 
 module.exports = countSymbols;
