@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>Заголовок страницы</title>
+  </head>
+  <body>
+    <ul>
+	  <li><a href="https://www.google.ru/">Searching</a></li>
+	  <li><a href="https://www.youtube.com/">YouTube</a></li>
+	  <li><a href="https://www.google.ru/maps">Card</a></li>
+	  <li><a href="https://play.google.com">Play</a></li>
+	  <li><a href="https://news.google.com/news/">News</a></li>
+	  <li><a href="https://accounts.google.com">Mail</a></li>
+	</ul>
+	<ol start="7">
+	<li>Searching</li>
+	<li>Card</li>
+	<li>Market</li>
+	<li>News</li>
+	<li>Dictionaries</li>
+	<li>Pictures</li>
+	<li>
+	  Yet
+	  <ul>
+	    <li>Flights</li>
+	    <li>Auto</li>
+		<li>Poster</li>
+		<li>Blogs</li>
+	  </ul>
+	</li>
+	</ol>
+	<dl>
+	  <dt><i>Tag</i></dt>
+		<dd>element of Hyber Text Markup Language</dd>
+	  <dt><i>The Semantic Web</i></dt>
+		<dd>This direction of development of the World Wide Web, the aim of which is to provide information in a form suitable for marchine processing</dd>
+	</dl>
+	<hr>
+	<table border="2px">
+		<caption>CSS Generated content for preudo-elements</caption>
+		<tr>
+		  <th>IE</th>
+		  <th>Firefox</th>
+		  <th>Chrome</th>
+		  <th>Safari</th>
+		  <th>Opera</th>
+		  <th>iOS Safari</th>
+		  <th>Opera Mini</th>
+		  <th>Android Browser</th>
+		  <th>Chrome for Android</th>
+		</tr>
+		<tr><td rowspan="2"></td><td rowspan="4"></td><td>27</td><td rowspan="3"></td><td rowspan="5"></td><td rowspan="4"></td><td rowspan="5"></td><td></td><td rowspan="5"></td></tr>
+		<tr><td>31</td><td>2.3</td></tr>
+		<tr><td>8</td><td>33</td><td>4</td></tr>
+		<tr><td>9</td><td>34</td><td>5.1</td><td>4.1</td></tr>
+		<tr><td>10</td><td>30</td><td>35</td><td>6.1</td><td>6.1</td><td>4.3</td></tr>
+		<tr><td>11</td><td>31</td><td>36</td><td>7</td><td>23</td><td>7.1</td><td>7</td><td>4.4</td><td>36</td></tr>
+		<tr><td colspan="9">Method of displaying text or images before or after the given element's contents using the :before and :after pseudo-elements</td></tr>
+	</table>
+	<hr>
+
+	<form action="http://httpbin.org/get" method="GET">
+	<fieldset>
+	  <legend>Personal Data</legend>
+	    <label>Surname<input type="text" name="Surname"></label><br><br>
+	    <label>Name<input type="text" name="Name"></label><br><br>
+	    <label>Middle name<input type="text" name="Patronimic"></label><br><br>
+	    <label>You are</label><input type="radio" name="Sex" value="male" checked> male<input type="radio" name="Sex" value="female"> female<br><br>
+	    <label>Age <input type="number" name="Age" min="18" max="101"></label><br><br>
+	    <label>Country of Residence<input type="text" list="CountryOfResidence"></label><br><br>
+		<datalist id="CountryOfResidence">
+			<option value="Russia"></option>
+		  <option value="USA"></option>
+		  <option value="Ukraine"></option>
+		  <option value="Argentiva"></option>
+		  <option value="Indya"></option>
+		  <option value="Spain"></option>
+		  <option value="China"></option>
+		  <option value="United Kingdom"></option>
+		  <option value="Germany"></option>
+		  <option value="France"></option>
+		  <option value="Japan"></option>
+		  <option value="Australia"></option>
+		</datalist>
+		<label>City</label>
+		<input type="checkbox" name="City" value="Moskow">Moskow
+		<input type="checkbox" name="City" value="Ryazan">Ryazan
+		<br><br>
+	    <label>Photography<input type="file" name="Image"></label><br><br>
+	</fieldset>
+	<fieldset>
+	<label>Title 
+	  <select size="8" multiple>
+	    <optgroup label="Techologies">
+		<option>Web Master</option>
+		<option>Database Administrator</option>
+		<option>Computer-aided design</option>
+		</optgroup>
+		<optgroup label="Finance">
+		<option>Economic Planning</option>
+		<option>Management accounting</option>
+		<option>Budgeting and planning</option>
+		</optgroup>
+	  </select>
+	</label><br><br>
+	<label>Salary <input type="range"></label><br><br>
+<textarea>
+Tell us abiut yourself...
+</textarea>	    
+	</fieldset>
+	<fieldset>
+	  <legend>Contact Information</legend>
+	    <label>Site<input type="url" name="Site"></label><br><br>
+	    <label>Email<input type="email" name="Email"></label><br><br>
+	    <label>Phone<input type="tel" name="NumberPhone"></label><br><br>
+	</fieldset>
+	<label>Password<input type="password" required></label><br><br>
+	<input type="submit" value="Отправить">
+	<input type="reset" value="Очистить">
+	</form>
+  </body>
+</html>
