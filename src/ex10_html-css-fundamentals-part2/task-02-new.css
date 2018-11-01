@@ -1,0 +1,30 @@
+tr:nth-child(even) {
+  background-color: #f2f6fa;
+}
+
+ tr:nth-child(odd) {
+  background-color: #e3eaf3;
+}
+
+th{
+	text-transform: uppercase;
+	background-color: #e3eaf3;
+	padding: 30px;
+	text-align: left;
+}
+
+td{
+	padding: 30px;
+}
+
+table{
+	border-collapse:collapse; 
+	font: 14px/22px 'Arial', sans-serif;
+	color: #758697;
+}
+
+li {
+  background: url("3.png") 0 50% no-repeat;
+  list-style-type: none;
+  padding-left: 20px;
+}
