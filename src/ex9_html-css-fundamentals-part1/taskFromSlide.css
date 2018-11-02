@@ -1,0 +1,43 @@
+h1{
+    margin: 0%;
+}
+
+form div{
+    flex-direction: row;
+    display:flex;
+    justify-content: space-between;
+    margin:0.8rem 0;
+}
+
+form{
+    max-width: 300px;
+}
+
+span{
+    color: red;
+    font-size: 14px;
+}
+
+input{
+    padding: 5px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+label[for="message"]{
+    position: relative;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    background-color: azure;
+    width: 100px;
+    padding: 5px;
+}
+
+textarea{
+    resize: none;
+    width: 185px;
+    height: 60px;
+    border-radius: 10px;
+}

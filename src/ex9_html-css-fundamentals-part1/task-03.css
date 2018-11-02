@@ -1,0 +1,35 @@
+button{
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight:bold;
+    font-size: 20px;
+    color: #555555;
+    background:linear-gradient(0deg, #ADADAD, #E2E2E2);
+    border-radius: 10px;
+    border: 1px solid #9F9F9F;
+    box-shadow: 0 0 5px 0px black;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    background:linear-gradient(0deg, #E2E2E2, #ADADAD);
+}
+
+button:before, button:after{
+    content:"★";
+    color:#888888;
+    padding: 10px;
+    font-size: 26px;
+    color: gray;
+}
+
+.button{
+    background-color: #CBCBCB;
+    border: 2px solid #666666;
+    border-radius: 15px;
+    display: inline;
+    padding: 30px 5px 20px 5px;
+}
