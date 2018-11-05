@@ -30,6 +30,10 @@ header > img{
     display: none;
 }
 
+.background{
+    width: 100%;
+}
+
 .arrow-down {
     width: 0; 
     height: 0; 
