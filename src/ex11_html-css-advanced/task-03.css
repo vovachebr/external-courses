@@ -1,6 +1,5 @@
 .card{
     margin: 5% 10%;
-    border: 1px solid;
     width: 30%;
 }
 
@@ -10,6 +9,8 @@
     text-transform:uppercase; 
     font-weight:bold; 
     display:inline-block;
+    border: 2px solid gray;
+    margin: 0 -3px;
 }
 
 label { 
@@ -23,9 +24,8 @@ label {
 
 input { 
     margin-top:15px; 
-    border:1px solid #999; 
-    padding:3px 2px; 
     border: none;
+    width: 100%;
 }
 
 input:invalid + label {
@@ -44,18 +44,4 @@ input:focus {
 
 input:focus + label { 
     color:#33A; 
-}
-
-.title{
-    border-bottom: 1px solid gray;
-    width: 100%;
-}
-
-.price{
-    border-right: 1px solid gray;
-}
-
-.description{
-    border-top: 1px solid gray;
-    width: 100%;
 }
