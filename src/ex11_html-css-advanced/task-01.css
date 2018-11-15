@@ -1,0 +1,7 @@
+img{
+    width:400px;
+    height:400px;
+    /*border-radius: 50%;*/
+    -webkit-mask-image: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-image/mask-image.png);
+    mask-image: url(http://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-image/mask-image.png);
+  }
