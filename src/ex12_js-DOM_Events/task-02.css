@@ -1,0 +1,18 @@
+button{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: rgb(212,75,56);
+    color:white;
+}
+
+button:hover { background-color: rgb(232,95,76); } 
+button:active { background-color: rgb(152,15,0); }
+
+#accordion div{
+    display: none;
+}
+
+#accordion div.showen{
+    display: block;
+}
