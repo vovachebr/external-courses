@@ -7,7 +7,7 @@ function scanDOM(){
     for (let i = 0; i < items.length; i++) {
         const currentNode = items[i];
         if(currentNode.classList.length>0);
-            currentNode.classList.forEach((cl)=>resultClasses[cl] = resultClasses[cl] ? resultClasses[cl]+1 : 1);
+            currentNode.classList.forEach((cl)=>resultClasses[cl] ? resultClasses[cl]+1 : 1);
 
             resultTags[currentNode.tagName] = resultTags[currentNode.tagName] ? resultTags[currentNode.tagName]+1 : 1;
     }

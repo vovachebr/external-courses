@@ -9,10 +9,10 @@ button{
 button:hover { background-color: rgb(232,95,76); } 
 button:active { background-color: rgb(152,15,0); }
 
-div{
+#accordion div{
     display: none;
 }
 
-div.showen{
+#accordion div.showen{
     display: block;
 }

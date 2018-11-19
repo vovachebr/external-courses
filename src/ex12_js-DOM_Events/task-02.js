@@ -1,8 +1,10 @@
-let accordion = document.getElementsByTagName("button");
-
-for (let i = 0; i < accordion.length; i++) {
-    const button = accordion[i];
-    button.onclick = function(){
-        this.nextElementSibling.classList.toggle("showen");
+let accordion = document.getElementById("accordion");
+accordion.onclick = function(e){
+    let opened = document.getElementsByClassName("showen")[0];
+    let current = e.target.nextElementSibling;
+    if(opened && opened !== current){
+        opened.classList.toggle("showen");
     }
+    
+    current.classList.toggle("showen");
 }
