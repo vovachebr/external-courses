@@ -29,7 +29,6 @@ class Gift{
 }
 
 let gift = new Gift([new Sweet("chocolate",4),new Sweet("lollipop",8),new Sweet("candy",3),new Sweet("gum",5)]);
-let collator = new Intl.Collator(gift);
 console.log(gift.sort((a,b)=>a.weight-b.weight));
 console.log(gift.sort((a,b)=>a.name > b.name ? 1 : -1 ));
 console.log(gift.findByName('c'));
