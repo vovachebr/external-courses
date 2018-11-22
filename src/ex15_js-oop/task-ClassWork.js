@@ -1,18 +1,13 @@
 "use strict";
 
 class Shape {
-    constructor() {
-
-    }
-
     getSquare() {
-
+        console.error("Not");
     }
 }
 
 class Square extends Shape {
     constructor(width, height) {
-        super();
         this.width = width;
         this.height = height;
     }
