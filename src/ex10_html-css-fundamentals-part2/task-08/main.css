@@ -1,237 +1,236 @@
-*{
+* {
     margin: 0;
 }
 
-header > img{
+header>img {
     margin-left: 20%;
 }
 
-#contacts{
+#contacts {
     margin-left: 50%;
     margin-bottom: 50px;
     display: inline-block;
 }
 
-#contacts img{
+#contacts img {
     padding: 10px;
 }
 
-.menu{
-    height: 0px;
+.menu {
+    display: flex;
+    flex-direction: row;
 }
 
-.info{
+.info {
     padding: 10px;
+    margin-top: 10px;
     border: 2px solid #D5D5D6;
     border-radius: 5px;
 }
 
-.more{
+.more {
     display: none;
 }
 
-.background{
+.background {
+    z-index: 1;
     width: 100%;
 }
 
 .arrow-down {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     margin-left: 35%;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #D5D5D6;
 }
 
-#menu{
+#menu {
     margin: 5% 0%;
     width: 100%;
     border-top: 1px solid gray;
 }
 
-ul ul{
+ul ul {
     margin-left: 10%;
 }
 
-ul li{
-    padding: 20px;
+ul li {
+    padding: 20px 20px;
     display: inline-block;
     font-weight: bold;
+    max-height: 10px;
     border-left: 1px solid gray;
 }
 
-ul li:first-child{
+ul li:first-child {
     border: none;
 }
 
-ul li a{
+ul li a {
     color: gray;
     text-decoration: none;
 }
-ul li.selected a{
-    color:#00ABE5;
-    
+
+ul li:hover a {
+    color: #00ABE5;
 }
 
-.selected .arrow{
+li:hover .arrow {
     border: 10px solid transparent;
     border-bottom: 8px solid #1FAAE2;
     width: 1px;
     position: relative;
-    left: 25%;
+    left: 40%;
+    margin-top: -5px;
 }
 
-#search{
-    position: relative;
-    top: -4rem;
-    margin-left: 75%;
-    min-width: 300px;
+#search {
+    margin: 5px 0px 5px auto;
 }
 
-#search input{
+#search input {
     border: none;
     font-size: 22px;
 }
 
-h1,h2.center{
-    margin-top: -1.5rem;
-    bottom: -14rem;
+h1,
+h2.center {
+    display: inline-block;
+    top: -430px;
     width: 35%;
     position: relative;
     left: 30%;
     color: white;
     font-family: Geneva, Arial, Helvetica, sans-serif;
+    z-index: 2;
 }
 
-h1{
+h1 {
     text-transform: uppercase;
 }
 
-h2.center{
+h2.center {
     font-weight: 100;
 }
 
-h2.center::before{
+h2.center::before {
     content: "&";
     font-size: 3.75rem;
     color: #BBEDFF;
 }
 
-.bar{
-    margin-top: -18.75rem;
+.bar {
+    margin-top: -23.75rem;
+    margin-left: 40%;
 }
 
-.card{
+.card {
     display: inline-block;
     position: relative;
-    left: 41%;
-    margin: 12px -27px;
+    max-width: 240px;
 }
 
 .card img {
     width: 15.625rem;
-    margin: 0 -2px;
+    height: 200px;
 }
 
-.like{
-    text-align: center;
+.like {
+    width: 102%;
+    padding: 10px;
     position: relative;
-    display: inline-block;
-    left: -0.125rem;
-    width: 84%;
-    top: -2.75rem;
-    height: 2.5rem;
+    top: -50px;
     background: rgba(0, 0, 0, 0.3);
     border: none;
-    color:white;
+    color: white;
 }
 
-.like::before{
+.like::before {
     content: "♡";
     font-size: 20px;
 }
 
-.arrow-right{
+.arrow-right {
     display: inline-block;
     position: relative;
-    left: 37%;
-    padding: 4.375rem 2%;
-    top: -113px;
+    height: 200px;
+    top: -122px;
+    padding: 3.375rem 2%;
     background: #F4F4F4;
     color: #D4D4D4;
     font-size: 2.5rem;
-    font-weight: bold;
 }
 
-.content{
+.content {
     display: flex;
+    justify-content: space-around;
 }
 
-.info-card{
+.info-card {
     display: inline-block;
     width: 30%;
-    width: 25%;
     text-align: justify;
 }
 
-.info-card img{
+.info-card img {
     width: 3.125rem;
     position: relative;
     left: -17%;
     top: 4.375rem;
 }
 
-h2, p{
+h2,
+h3,
+p {
     color: #6D6E71;
     font-family: Geneva, Arial, Helvetica, sans-serif;
 }
 
-.info-card h2{
+.info-card h3 {
     padding: 10px;
     font-size: 16px;
 }
 
-
-@media (max-width: 1147px){
-    .main-content{
-        margin: -110px 0px;
+@media (max-width: 1147px) {
+    .main-content {
+        margin: -10px 0px;
         display: flex;
         flex-direction: column;
     }
-
-    .bar,#contacts,.menu{
+    .bar,
+    #contacts,
+    .menu {
         display: none;
     }
-
-    .more{
+    .more {
         display: block;
         margin: 10px;
     }
-
-    header img{
+    header img {
         margin-left: 45%;
     }
-
-    .more img{
+    .more img {
         margin-left: 0;
     }
-
-    h1,h2{
-        width: 60%;
-        margin-top: 16px;
-        min-width: 400px;
+    h1 {
+        margin-top: 10%;
     }
-    h2.center{
+    h1,
+    h2 {
+        min-width: 400px;
+        text-align: center;
+    }
+    h2.center {
         display: inline;
     }
-
-    .content{
+    .content {
         flex-direction: column;
         align-items: center;
-        margin-top: -9%;
+        margin-top: -30%;
     }
-
-    .info-card{
+    .info-card {
         width: 50%;
     }
 }
