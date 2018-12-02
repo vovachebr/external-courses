@@ -95,13 +95,18 @@ li:hover .arrow {
     font-size: 22px;
 }
 
+.headers {
+    background-image: url("./img/iback.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 30em;
+    padding-top: 10%;
+}
+
 h1,
 h2.center {
-    display: inline-block;
-    top: -430px;
-    width: 35%;
     position: relative;
-    left: 30%;
+    left: 35%;
     color: white;
     font-family: Geneva, Arial, Helvetica, sans-serif;
     z-index: 2;
@@ -122,8 +127,8 @@ h2.center::before {
 }
 
 .bar {
-    margin-top: -23.75rem;
     margin-left: 40%;
+    margin-top: -20%;
 }
 
 .card {
@@ -194,6 +199,9 @@ p {
 }
 
 @media (max-width: 1147px) {
+    .headers {
+        min-height: 20em;
+    }
     .main-content {
         margin: -10px 0px;
         display: flex;
@@ -214,13 +222,9 @@ p {
     .more img {
         margin-left: 0;
     }
-    h1 {
-        margin-top: 10%;
-    }
     h1,
     h2 {
         min-width: 400px;
-        text-align: center;
     }
     h2.center {
         display: inline;
@@ -228,7 +232,6 @@ p {
     .content {
         flex-direction: column;
         align-items: center;
-        margin-top: -30%;
     }
     .info-card {
         width: 50%;
