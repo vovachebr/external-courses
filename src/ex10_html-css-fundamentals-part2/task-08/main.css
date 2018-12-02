@@ -138,12 +138,11 @@ h2.center::before {
 }
 
 .card img {
-    width: 15.625rem;
     height: 200px;
 }
 
 .like {
-    width: 102%;
+    width: 100%;
     padding: 10px;
     position: relative;
     top: -50px;
@@ -180,10 +179,8 @@ h2.center::before {
 }
 
 .info-card img {
-    width: 3.125rem;
     position: relative;
     left: -17%;
-    top: 4.375rem;
 }
 
 h2,
