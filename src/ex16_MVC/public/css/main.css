@@ -1,0 +1,291 @@
+* {
+    margin: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    background-color: #2E3549;
+    color: white;
+    height: 50px;
+}
+
+header .buttons {
+    display: inline;
+}
+
+div.person {
+    background-color: #15A4FA;
+    vertical-align: middle;
+    padding: 0px 30px;
+}
+
+.person img {
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.person span,
+.person i {
+    vertical-align: middle;
+}
+
+header a {
+    color: #576077;
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: #19202E;
+}
+
+header div {
+    float: right;
+    height: 100%;
+    text-align: center;
+}
+
+nav {
+    width: 20%;
+    padding-bottom: 10%;
+    float: left;
+    background-color: #1F2637;
+    color: #78829D;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.addBook {
+    padding: 10px 15px;
+    margin: 20px 25%;
+    border: none;
+    border-radius: 5px;
+    background-color: #F2795A;
+    color: white;
+    font-weight: bold;
+}
+
+nav hr {
+    border: 3px solid #19202E;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    padding: 10px 0 10px 30px;
+    text-decoration: none;
+    color: #78829D;
+    display: inline-block;
+    width: calc(100% - 30px);
+}
+
+nav a:hover {
+    background-color: #15A4FA;
+    color: white;
+}
+
+.styles li a::before {
+    content: "•";
+    padding-right: 10px;
+}
+
+.styles li:nth-child(1) a::before {
+    color: red;
+}
+
+.styles li:nth-child(2) a::before {
+    color: yellow;
+}
+
+.styles li:nth-child(3) a::before {
+    color: #00BFDD;
+}
+
+.styles li:nth-child(4) a::before {
+    color: #7874CF;
+}
+
+.additional p {
+    margin: 0px;
+}
+
+.additional {
+    padding: 20px 20px 40px 20px;
+    font-size: 12px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: #2E3549;
+    width: 100%;
+}
+
+footer .buttons {
+    float: right;
+}
+
+footer .buttons i {
+    padding: 10px;
+    margin: 0px -2px;
+    color: white;
+    background-color: #1E2536;
+}
+
+footer .buttons i:hover {
+    background-color: #15A4FA;
+}
+
+h1 {
+    color: #62697D;
+    padding: 20px 0px 20px 30px;
+    background-color: #EEF1F7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+#pageContent {
+    float: right;
+    width: 80%;
+}
+
+.dialog {
+    background-color: #EEF1F7;
+}
+
+#search {
+    position: relative;
+    left: 20%;
+    display: inline-block;
+    width: 35%;
+}
+
+#search i {
+    position: relative;
+    left: -10%;
+    color: #929CB6;
+}
+
+.dialog [type="text"] {
+    margin: 20px 0px;
+    padding: 5px;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.dialog [type="text"]:focus {
+    outline: none;
+}
+
+.filteres {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.dialog [type="radio"] {
+    display: none;
+}
+
+.dialog label {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #A3ABC1;
+}
+
+.dialog [type="radio"]:checked+label {
+    background-color: #97B3CE;
+    color: white;
+}
+
+#booksList {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 650px;
+}
+
+.BookCard {
+    padding: 10px;
+    max-width: 175px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 50px;
+}
+
+.author {
+    font-size: 16px;
+    min-height: 40px;
+}
+
+.starsRating {
+    color: #FFAB00;
+}
+
+#modal {
+    position: absolute;
+    border-radius: 10%;
+    left: 25%;
+    top: 20%;
+    width: 50%;
+    height: 45%;
+    background-color: #2E3549;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    float: right;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+.close {
+    width: 12%;
+    position: relative;
+    left: 90%;
+    background-color: #576077;
+}
+
+#modal {
+    color: #788283;
+}
+
+#modal img {
+    position: relative;
+    top: 20%;
+    left: 8%;
+    width: 180px;
+    height: 220px;
+}
+
+#modal.hidden {
+    display: none;
+}
+
+#modal.showen {
+    display: block;
+}
+
+.buttons * {
+    margin: 10%;
+    padding: 5px 15px;
+}
+
+.buttons .delete {
+    background-color: red;
+}
+
+.buttons .submit {
+    background-color: orange;
+}
