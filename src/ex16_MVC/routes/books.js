@@ -76,13 +76,3 @@ router.put("/:id", function(request, response) {
 })
 
 module.exports = router;
-
-/*
-fetch("/books", {method:'post', headers:{'content-type':'application/json'},body:JSON.stringify({title: 'Моя книга', rating: 2, price: 100 })}).
-then(response => {
-	if (response.ok){
-		console.log(response.status)
-		return response.json();
-	}
-}).then(text => console.log(text));
-*/
