@@ -4,38 +4,44 @@ export default class BookLibrary {
     constructor() {
         this.onGetBooks = new EventEmitter;
         this.onGetBook = new EventEmitter;
+        this.onFilterBook = new EventEmitter;
     }
 
-    getBooks(filter) {
-        return fetch('/api/books' + filter)
-            .then(responce => {
-                if (responce.ok) {
-                    return responce.json();
-                }
-                throw new Error('Somethon goes wrong =(');
-            })
+    getAllBooks() {
+        return fetch('/api/books')
+            .then(responseCallback)
             .then(data => this.onGetBooks.notify(data.payload));
+    }
+
+    filterBooks(filter) {
+        filter = filter ? "?filter=" + filter : "";
+        return fetch('/api/books' + filter)
+            .then(responseCallback)
+            .then(data => this.onFilterBook.notify(data.payload));
+    }
+
+    matchBooks(filter) {
+        let that = this;
+        if (this.timer)
+            clearTimeout(this.timer);
+
+        this.timer = setTimeout(function() {
+            filter = filter ? "?match=" + filter : "";
+            return fetch('/api/books' + filter)
+                .then(responseCallback)
+                .then(data => that.onFilterBook.notify(data.payload));
+        }, 500);
     }
 
     getBook(id) {
         return fetch('/api/books/' + id)
-            .then(responce => {
-                if (responce.ok) {
-                    return responce.json();
-                }
-                throw new Error('Somethon goes wrong =(');
-            })
+            .then(responseCallback)
             .then(data => this.onGetBook.notify(data.payload));
     }
 
     deleteBook(id) {
         return fetch('/api/books/' + id, { method: 'delete' })
-            .then(responce => {
-                if (responce.ok) {
-                    return responce.json();
-                }
-                throw new Error('Somethon goes wrong =(');
-            })
+            .then(responseCallback)
             .then(data => this.onGetBooks.notify(data.payload));
     }
 
@@ -45,12 +51,7 @@ export default class BookLibrary {
                 method: 'post',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify(sender)
-            }).then(responce => {
-                if (responce.ok) {
-                    return responce.json();
-                }
-                throw new Error('Somethon goes wrong =(');
-            })
+            }).then(responseCallback)
             .then(data => this.onGetBooks.notify(data.payload));
     }
 
@@ -60,11 +61,13 @@ export default class BookLibrary {
             method: 'put',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(sender)
-        }).then(responce => {
-            if (responce.ok) {
-                return responce.json();
-            }
-            throw new Error('Somethon goes wrong =(');
-        }).then(data => this.onGetBooks.notify(data.payload));
+        }).then(responseCallback).then(data => this.onGetBooks.notify(data.payload));
     }
+}
+
+function responseCallback(responce) {
+    if (responce.ok) {
+        return responce.json();
+    }
+    throw new Error('Somethon goes wrong =(');
 }

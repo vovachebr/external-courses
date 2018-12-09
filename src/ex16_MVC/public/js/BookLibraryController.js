@@ -9,12 +9,15 @@ export default class BookLibraryController {
 
     start() {
         this.view.init();
-        this.model.getBooks("");
+        this.model.getAllBooks();
     }
 
-    getBooks(filter) {
-        let filterQuery = filter ? "?filter=" + filter : "";
-        this.model.getBooks(filterQuery);
+    getAllBooks() {
+        this.model.getAllBooks();
+    }
+
+    filterBooks(filter) {
+        this.model.filterBooks(filter);
     }
 
     getBookById(id) {
@@ -34,13 +37,6 @@ export default class BookLibraryController {
     }
 
     matchBooks(filter) {
-        let that = this;
-        if (this.timer)
-            clearTimeout(this.timer);
-
-        this.timer = setTimeout(function() {
-            let filterQuery = filter ? "?match=" + filter : "";
-            that.model.getBooks(filterQuery);
-        }, 500);
+        this.model.matchBooks(filter);
     }
 }

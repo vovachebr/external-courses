@@ -14,7 +14,6 @@ export default class BookLibraryView {
         var that = this;
 
         this.model.onGetBooks.subscribe(function(books) {
-            that.clearDiv();
             that.renderBooks(books);
         });
 
@@ -22,9 +21,13 @@ export default class BookLibraryView {
             that.renderModalBook(book);
         });
 
+        this.model.onFilterBook.subscribe(function(books) {
+            that.renderBooks(books);
+        });
+
         this.radioSwitch.forEach(function(radio) {
             radio.addEventListener("click", function(e) {
-                that.controller.getBooks(e.target.value);
+                that.controller.filterBooks(e.target.value);
             })
         });
 
@@ -94,6 +97,7 @@ export default class BookLibraryView {
     }
 
     renderBooks(books) {
+        this.clearDiv();
         for (let i = 0; i < books.length; i++) {
             const book = books[i];
 
