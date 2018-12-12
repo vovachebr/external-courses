@@ -7,7 +7,6 @@ export default class BookLibraryView {
         this.radioSwitch = document.querySelectorAll('.filteres input');
         this.inputBox = document.querySelector('#search input');
         this.imgages = document.querySelector('.BookCard img') || [];
-
     }
 
     init() {
@@ -57,9 +56,10 @@ export default class BookLibraryView {
             document.querySelector('#modal img').src = link;
         });
 
-        document.querySelector('#modal .submit').addEventListener("click", function(e) {
+        document.querySelector('#modal form').addEventListener("submit", function(e) {
             let id = +this.parentElement.parentElement.parentElement.getAttribute("data-id");
-            let book = that.takeBookData();
+            let book = new FormData(e.target);
+            //let book = that.takeBookData();
             if (id == 0) {
                 that.controller.addBook(book);
             } else {
@@ -72,7 +72,7 @@ export default class BookLibraryView {
     }
 
     takeBookData() {
-        let book = {};
+        /*let book = {};
         book.title = document.getElementById("modalName").value;
         book.author = document.getElementById("modalAuthor").value;
         book.rating = +document.getElementById("modalRating").value;
@@ -83,7 +83,7 @@ export default class BookLibraryView {
             book.avatar = window.URL.createObjectURL(file);
 
         book.id = +document.getElementById("modal").getAttribute("data-id");
-        return book;
+        return book;*/
     }
 
     subscribeBookDetailEvent() {
@@ -109,11 +109,11 @@ export default class BookLibraryView {
                 avatar.src = book.avatar;
             } else {
                 book.src = book.src || "no_image";
-                avatar.src = "./image/" + book.src + ".jpg";
+                avatar.src = book.src;
             }
 
             avatar.width = 180;
-            avatar.height = 220;
+            avatar.height = 200;
             avatar.setAttribute("data-id", book.id);
 
             const title = document.createElement("div");
@@ -146,7 +146,7 @@ export default class BookLibraryView {
             avatar.src = book.avatar;
         } else {
             book.src = book.src || "no_image";
-            avatar.src = "./image/" + book.src + ".jpg";
+            avatar.src = book.src;
         }
         let bookName = document.getElementById("modalName");
         bookName.value = book.title;

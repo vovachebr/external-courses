@@ -2,10 +2,6 @@
     margin: 0px;
 }
 
-body {
-    overflow: hidden;
-}
-
 header {
     background-color: #2E3549;
     color: white;
@@ -52,7 +48,6 @@ header div {
 
 nav {
     width: 20%;
-    padding-bottom: 10%;
     float: left;
     background-color: #1F2637;
     color: #78829D;
@@ -207,12 +202,11 @@ h1 {
 #booksList {
     display: flex;
     flex-wrap: wrap;
-    overflow-y: scroll;
     max-height: 650px;
 }
 
 .BookCard {
-    padding: 10px;
+    padding: 5px 10px;
     max-width: 175px;
 }
 
@@ -232,22 +226,23 @@ h1 {
 }
 
 #modal {
-    position: absolute;
+    position: fixed;
     border-radius: 10%;
     left: 25%;
     top: 20%;
     width: 50%;
-    height: 45%;
+    margin: auto;
     background-color: #2E3549;
 }
 
-.info {
+form {
     display: flex;
     flex-direction: column;
     width: 40%;
     float: right;
-    margin-right: 15%;
+    margin-right: 10%;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .close {
@@ -262,9 +257,9 @@ h1 {
 }
 
 #modal img {
-    position: relative;
-    top: 20%;
-    left: 8%;
+    position: inherit;
+    top: 35%;
+    left: 31%;
     width: 180px;
     height: 220px;
 }
@@ -278,8 +273,8 @@ h1 {
 }
 
 .buttons * {
-    margin: 10%;
-    padding: 5px 15px;
+    margin-top: 10%;
+    padding: 10px 30px;
 }
 
 .buttons .delete {

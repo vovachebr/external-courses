@@ -46,21 +46,17 @@ export default class BookLibrary {
     }
 
     addBook(book) {
-        const sender = book;
         return fetch('/api/books/', {
                 method: 'post',
-                headers: { 'content-type': 'application/json' },
-                body: JSON.stringify(sender)
+                body: book
             }).then(responseCallback)
             .then(data => this.onGetBooks.notify(data.payload));
     }
 
     updateBook(book) {
-        const sender = book;
         return fetch('/api/books/' + book.id, {
             method: 'put',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify(sender)
+            body: book
         }).then(responseCallback).then(data => this.onGetBooks.notify(data.payload));
     }
 }
