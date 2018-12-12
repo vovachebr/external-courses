@@ -49,6 +49,8 @@ header div {
 nav {
     width: 20%;
     float: left;
+    display: flex;
+    flex-direction: column;
     background-color: #1F2637;
     color: #78829D;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,6 +148,10 @@ h1 {
     font-weight: normal;
 }
 
+.page {
+    display: flex;
+}
+
 #pageContent {
     float: right;
     width: 80%;
@@ -202,7 +208,7 @@ h1 {
 #booksList {
     display: flex;
     flex-wrap: wrap;
-    max-height: 650px;
+    margin-bottom: 5%;
 }
 
 .BookCard {
@@ -257,9 +263,9 @@ form {
 }
 
 #modal img {
-    position: inherit;
-    top: 35%;
-    left: 31%;
+    position: relative;
+    top: 70px;
+    left: 12%;
     width: 180px;
     height: 220px;
 }

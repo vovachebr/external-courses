@@ -22,52 +22,54 @@
             </div>
         </div>
     </header>
-    <nav>
-        <button class="addBook">+ADD A BOOK</button>
-        <hr>
-        <ul class="menu">
-            <li><a href="#"><i class="fas fa-book-open"></i> Now Reading</a></li>
-            <li><a href="#"><i class="fas fa-globe-americas"></i> Browse</a></li>
-            <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Buy Books</a></li>
-            <li><a href="#"><i class="fas fa-star"></i> Favorite Books</a></li>
-            <li><a href="#"><i class="fas fa-th-list"></i> Wishlist</a></li>
-            <li><a href="#"><i class="far fa-clock"></i> History</a></li>
-        </ul>
-        <hr>
-        <ul class="styles">
-            <li><a href="#">Must Read Titles</a></li>
-            <li><a href="#">Best Of List</a></li>
-            <li><a href="#">Classic Novels</a></li>
-            <li><a href="#">Non Fiction</a></li>
-        </ul>
-        <hr>
-        <div class="additional">
-            <p><i class="far fa-clock"></i> You added <strong>Fight Club</strong> by <strong>Chuck Palahniuk</strong> to your <strong>Must Read Titles</strong></p>
-            <br>
-            <span>24 minutes ago</span>
-        </div>
-        <div class="additional">
-            <p><i class="far fa-clock"></i> You added <strong>The Trial</strong> by <strong>Franz Kafka</strong> to your <strong>Must Read Titles</strong></p>
-            <br>
-            <span>48 minutes ago</span>
-        </div>
-    </nav>
-    <div id="pageContent">
-        <h1>Browse Available Books</h1>
-        <hr>
-        <div class="dialog">
-            <div class="filteres">
-                <input type="radio" name="booksFilter" id="allBooks" value="" checked><label for="allBooks">All Books</label>
-                <input type="radio" name="booksFilter" id="mostRecent" value="recent"><label for="mostRecent">Most Recent</label>
-                <input type="radio" name="booksFilter" id="mostPopular" value="most-popular"><label for="mostPopular">Most Popular</label>
-                <input type="radio" name="booksFilter" id="freeBooks" value="free"><label for="freeBooks">Free Books</label>
+    <div class="page">
+        <nav>
+            <button class="addBook">+ADD A BOOK</button>
+            <hr>
+            <ul class="menu">
+                <li><a href="#"><i class="fas fa-book-open"></i> Now Reading</a></li>
+                <li><a href="#"><i class="fas fa-globe-americas"></i> Browse</a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"></i> Buy Books</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> Favorite Books</a></li>
+                <li><a href="#"><i class="fas fa-th-list"></i> Wishlist</a></li>
+                <li><a href="#"><i class="far fa-clock"></i> History</a></li>
+            </ul>
+            <hr>
+            <ul class="styles">
+                <li><a href="#">Must Read Titles</a></li>
+                <li><a href="#">Best Of List</a></li>
+                <li><a href="#">Classic Novels</a></li>
+                <li><a href="#">Non Fiction</a></li>
+            </ul>
+            <hr>
+            <div class="additional">
+                <p><i class="far fa-clock"></i> You added <strong>Fight Club</strong> by <strong>Chuck Palahniuk</strong> to your <strong>Must Read Titles</strong></p>
+                <br>
+                <span>24 minutes ago</span>
             </div>
-            <div id="search">
-                <input type="text" placeholder="Enter Keywords">
-                <i class="fas fa-search"></i>
+            <div class="additional">
+                <p><i class="far fa-clock"></i> You added <strong>The Trial</strong> by <strong>Franz Kafka</strong> to your <strong>Must Read Titles</strong></p>
+                <br>
+                <span>48 minutes ago</span>
             </div>
+        </nav>
+        <div id="pageContent">
+            <h1>Browse Available Books</h1>
+            <hr>
+            <div class="dialog">
+                <div class="filteres">
+                    <input type="radio" name="booksFilter" id="allBooks" value="" checked><label for="allBooks">All Books</label>
+                    <input type="radio" name="booksFilter" id="mostRecent" value="recent"><label for="mostRecent">Most Recent</label>
+                    <input type="radio" name="booksFilter" id="mostPopular" value="most-popular"><label for="mostPopular">Most Popular</label>
+                    <input type="radio" name="booksFilter" id="freeBooks" value="free"><label for="freeBooks">Free Books</label>
+                </div>
+                <div id="search">
+                    <input type="text" placeholder="Enter Keywords">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+            <div id="booksList"></div>
         </div>
-        <div id="booksList"></div>
     </div>
     <footer>
         <div class="buttons">
@@ -84,7 +86,7 @@
                 <label for="modalRating">Rating</label><input type="number" min="0" max="5" step="0.5" name="rating" id="modalRating">
                 <label for="modalCreateDate">Create Date</label><input type="date" id="modalCreateDate" name="created_at">
                 <label for="modalPrice">Price</label><input type="number" id="modalPrice" name="price">
-                <label for="modalAvatar">Avatar</label><input type="file" id="modalAvatar" accept="image/*" name="src">
+                <label for="modalAvatar">Avatar</label><input type="file" id="modalAvatar" accept="image/*" required name="src">
                 <div class="buttons">
                     <button class="delete">Delete</button>
                     <input type="submit" class="submit">
