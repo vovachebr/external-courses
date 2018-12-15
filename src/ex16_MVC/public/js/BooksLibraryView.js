@@ -35,10 +35,12 @@ export default class BookLibraryView {
         });
 
         document.querySelector("#modal .close").addEventListener("click", function(e) {
+            e.preventDefault();
             that.closeModal();
         });
 
         document.querySelector("#modal .delete").addEventListener("click", function(e) {
+            e.preventDefault();
             that.closeModal();
             let id = +e.target.parentNode.parentNode.parentNode.getAttribute("data-id");
             that.controller.deleteBook(id);
@@ -57,9 +59,10 @@ export default class BookLibraryView {
         });
 
         document.querySelector('#modal form').addEventListener("submit", function(e) {
-            let id = +this.parentElement.parentElement.parentElement.getAttribute("data-id");
+            e.preventDefault();
+            let id = +this.parentElement.getAttribute("data-id");
             let book = new FormData(e.target);
-            //let book = that.takeBookData();
+            book.id = id;
             if (id == 0) {
                 that.controller.addBook(book);
             } else {
@@ -69,21 +72,6 @@ export default class BookLibraryView {
         })
 
         this.subscribeBookDetailEvent();
-    }
-
-    takeBookData() {
-        /*let book = {};
-        book.title = document.getElementById("modalName").value;
-        book.author = document.getElementById("modalAuthor").value;
-        book.rating = +document.getElementById("modalRating").value;
-        book.created_at = new Date(document.getElementById("modalCreateDate").value).toISOString();;
-        book.price = +document.getElementById("modalPrice").value;
-        let file = document.getElementById("modalAvatar").files[0];
-        if (file)
-            book.avatar = window.URL.createObjectURL(file);
-
-        book.id = +document.getElementById("modal").getAttribute("data-id");
-        return book;*/
     }
 
     subscribeBookDetailEvent() {
@@ -126,11 +114,12 @@ export default class BookLibraryView {
 
             const rate = this.getRatingStars(book.rating);
             rate.classList.add("starsRating");
-
-            bookDiv.append(avatar);
-            bookDiv.append(title);
-            bookDiv.append(author);
-            bookDiv.append(rate);
+            const fragment = document.createDocumentFragment();
+            fragment.append(avatar);
+            fragment.append(title);
+            fragment.append(author);
+            fragment.append(rate);
+            bookDiv.append(fragment);
             booksList.append(bookDiv);
         }
         this.subscribeBookDetailEvent();
@@ -154,6 +143,8 @@ export default class BookLibraryView {
         bookAuthor.value = book.author;
         let bookRating = document.getElementById("modalRating");
         bookRating.value = book.rating;
+        let bookKeywords = document.getElementById("modalKeywords");
+        bookKeywords.value = book.keywords;
         let bookCreated = document.getElementById("modalCreateDate");
         bookCreated.value = book.created_at.substring(0, 10);
         let bookPrice = document.getElementById("modalPrice");
